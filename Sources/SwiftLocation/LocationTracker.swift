@@ -218,7 +218,19 @@ public final class LocationTracker: NSObject, CLLocationManagerDelegate {
 	/// is not unduly disrupted.
 	public func dismissHeadingCalibrationDisplay() {
 		locationManager.dismissHeadingCalibrationDisplay()
-	}
+    }
+
+    // MARK: - Authorization accessors
+
+    /// To request always auth user the location manager
+    public func requestAlwaysAuthorization() {
+        locationManager.requestAlwaysAuthorization()
+    }
+
+    /// To request when in use auth user the location manager
+    public func requestWhenInUseAuthorization() {
+        locationManager.requestWhenInUseAuthorization()
+    }
 	
 	// MARK: - Get location
 	
